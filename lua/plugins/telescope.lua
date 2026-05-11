@@ -4,18 +4,17 @@ return {
         'nvim-lua/plenary.nvim',
         -- optional but recommended
         { 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' },
-    },
-
+    }, 
      keys = {
     {
-      "<leader>ff",
+      "<leader>pff",
       function()
         require("telescope.builtin").find_files()
       end,
       desc = "Find files",
     },
     {
-      "<leader>fg",
+      "<leader>pfg",
       function()
         require("telescope.builtin").live_grep()
       end,
@@ -29,14 +28,14 @@ return {
       desc = "Find buffers",
     },
     {
-      "<leader>fh",
+      "<leader>pfh",
       function()
         require("telescope.builtin").help_tags()
       end,
       desc = "Help tags",
     },
     {
-      "<leader>fr",
+      "<leader>pfr",
       function()
         require("telescope.builtin").oldfiles()
       end,
@@ -44,42 +43,42 @@ return {
     },
      -- Git
     {
-      "<leader>gf",
+      "<leader>pgf",
       function()
         require("telescope.builtin").git_files()
       end,
       desc = "Git files",
     },
     {
-      "<leader>gs",
+      "<leader>pgs",
       function()
         require("telescope.builtin").git_status()
       end,
       desc = "Git status",
     },
     {
-      "<leader>gc",
+      "<leader>pgc",
       function()
         require("telescope.builtin").git_commits()
       end,
       desc = "Git commits",
     },
     {
-      "<leader>gb",
+      "<leader>pgb",
       function()
         require("telescope.builtin").git_branches()
       end,
       desc = "Git branches",
     },
     {
-      "<leader>gC",
+      "<leader>pgC",
       function()
         require("telescope.builtin").git_bcommits()
       end,
       desc = "Git buffer commits",
     },
     {
-      "<leader>gst",
+      "<leader>pgst",
       function()
         require("telescope.builtin").git_stash()
       end,

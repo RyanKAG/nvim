@@ -1,7 +1,11 @@
 vim.keymap.set("n", "<leader>w", "<cmd>w<CR>", {
-  desc = "Save file",
+    desc = "Save file",
 })
 
 vim.keymap.set("n", "<leader>q", "<cmd>q<CR>", {
-  desc = "Quit",
+    desc = "Quit",
+})
+
+vim.keymap.set("n", "<leader>pv", "<cmd>Ex<CR>", {
+    desc = "Explorer",
 })
