@@ -24,3 +24,11 @@ vim.keymap.set("n", "<leader>bd", "<cmd>bdelete<CR>", {
 vim.keymap.set("n", "<leader>bl", "<cmd>ls<CR>", {
     desc = "List buffers",
 })
+
+vim.keymap.set("n", "<C-d>", "<C-d>zz", {
+    desc = "Half page down and center",
+})
+
+vim.keymap.set("n", "<C-u>", "<C-u>zz", {
+    desc = "Half page up and center",
+})
