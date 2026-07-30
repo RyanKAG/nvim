@@ -1,9 +1,9 @@
 return {
-  "folke/which-key.nvim",
-  event = "VeryLazy",
+	"folke/which-key.nvim",
+	event = "VeryLazy",
 
-  opts = {
-    preset = "modern",
-    delay = 300,
-  },
+	opts = {
+		preset = "modern",
+		delay = 500,
+	},
 }

@@ -1,39 +1,47 @@
 return {
-    "nvim-treesitter/nvim-treesitter",
-    build = ":TSUpdate",
-    lazy = false,
-    config = function()
-        require("nvim-treesitter").setup({
-            ensure_installed = {
-                -- Core
-                "lua",
-                "vim",
-                "vimdoc",
-                "bash",
-                "json",
-                "yaml",
-                "toml",
-                "markdown",
+	"nvim-treesitter/nvim-treesitter",
+	branch = "main",
+	build = ":TSUpdate",
+	lazy = false,
 
-                -- Python
-                "python",
+	config = function()
+		local ts = require("nvim-treesitter")
 
-                -- C / C++
-                "c",
-                "cpp",
-                "cmake",
+		ts.install({
+			"lua",
+			"vim",
+			"vimdoc",
+			"bash",
+			"json",
+			"yaml",
+			"toml",
+			"markdown",
+			"python",
+			"c",
+			"cpp",
+			"cmake",
+			"rust",
+		})
 
-                -- Rust
-                "rust",
-            },
-
-            highlight = {
-                enable = true,
-            },
-
-            indent = {
-                enable = true,
-            },
-        })
-    end,
+		vim.api.nvim_create_autocmd("FileType", {
+			pattern = {
+				"lua",
+				"vim",
+				"vimdoc",
+				"bash",
+				"json",
+				"yaml",
+				"toml",
+				"markdown",
+				"python",
+				"c",
+				"cpp",
+				"cmake",
+				"rust",
+			},
+			callback = function()
+				vim.treesitter.start()
+			end,
+		})
+	end,
 }
